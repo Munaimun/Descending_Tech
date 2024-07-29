@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLaptopCode,
@@ -86,6 +88,18 @@ const Services = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="bg-gray-200 w-80 p-6 rounded-lg shadow-md">
+        <p className="text-gray-600 mb-4">
+          Contact us today to discuss your project.
+        </p>
+        <Link
+          to="/contact"
+          className="bg-gray-800 px-6 py-3 rounded-md text-lg md:text-xl hover:bg-black transition duration-300 text-white"
+        >
+          Contact Us
+        </Link>
       </div>
     </div>
   );
