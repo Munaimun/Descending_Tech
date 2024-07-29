@@ -51,6 +51,7 @@ const About = () => {
               <li className="mb-2">E-commerce Solutions</li>
               <li className="mb-2">Portfolio Websites</li>
               <li className="mb-2">ERP Systems</li>
+              <li className="mb-2">Mobile App Development</li>
               <li className="mb-2">UI/UX Design</li>
               <li className="mb-2">Digital Marketing</li>
               <li className="mb-2">Graphics Design</li>
