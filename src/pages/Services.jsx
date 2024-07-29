@@ -9,61 +9,59 @@ const Services = () => {
           We offer a wide range of IT solutions tailored to meet your business
           needs.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Custom Website Building
-            </h2>
-            <p className="text-gray-600">
-              We create custom websites that are visually appealing,
-              user-friendly, and optimized for performance.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              E-Commerce Solutions
-            </h2>
-            <p className="text-gray-600">
-              Our e-commerce solutions are designed to help you sell more online
-              with robust features and seamless integrations.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Portfolio Websites
-            </h2>
-            <p className="text-gray-600">
-              Showcase your work with a stunning portfolio website that
-              highlights your skills and achievements.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              ERP Solutions
-            </h2>
-            <p className="text-gray-600">
-              Streamline your business processes with our comprehensive ERP
-              solutions tailored to your needs.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Digital Marketing
-            </h2>
-            <p className="text-gray-600">
-              Enhance your online presence with our digital marketing services,
-              including SEO, social media, and PPC campaigns.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              UI/UX Design
-            </h2>
-            <p className="text-gray-600">
-              Our UI/UX design services ensure your applications are
-              user-friendly, aesthetically pleasing, and highly functional.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            {
+              title: "Custom Website Building",
+              description:
+                "We create custom websites that are visually appealing, user-friendly, and optimized for performance.",
+            },
+            {
+              title: "E-Commerce Solutions",
+              description:
+                "Our e-commerce solutions are designed to help you sell more online with robust features and seamless integrations.",
+            },
+            {
+              title: "Portfolio Websites",
+              description:
+                "Showcase your work with a stunning portfolio website that highlights your skills and achievements.",
+            },
+            {
+              title: "ERP Solutions",
+              description:
+                "Streamline your business processes with our comprehensive ERP solutions tailored to your needs.",
+            },
+            {
+              title: "Mobile App Development:",
+              description:
+                "Our mobile app development services ensure your business is accessible on the go. We create intuitive, high-performing apps for both iOS and Android platforms.",
+            },
+            {
+              title: "UI/UX Design",
+              description:
+                "Our UI/UX design services ensure your applications are user-friendly, aesthetically pleasing, and highly functional.",
+            },
+            {
+              title: "Graphics Design",
+              description:
+                "Our graphics design team crafts visually stunning and impactful designs that elevate your brand's identity and engage your audience. From logos and marketing materials to digital assets, we bring your vision to life.",
+            },
+            {
+              title: "Digital Marketing",
+              description:
+                "Enhance your online presence with our digital marketing services, including SEO, social media, and PPC campaigns.",
+            },
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            >
+              <h2 className="text-2xl font-bold text-gray-800 mb-4 hover:text-blue-600 transition-colors duration-300">
+                {service.title}
+              </h2>
+              <p className="text-gray-600">{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
-
 import { Link } from "react-router-dom";
+
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import Logo from "../assets/F.png";
@@ -18,14 +18,14 @@ const Navbar = () => {
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white font-bold text-xl">
-          <Link to="/" id="logo" className="flex">
-            <img src={Logo} alt="Descending" className="logo" />
+          <Link to="/" id="logo" className="flex items-center">
+            <img src={Logo} alt="Descending" className="logo mr-2" />
             Descending
           </Link>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white">
-            {isOpen ? <FaTimes /> : <FaBars />}
+            {isOpen ? <FaTimes className="cross-icon" /> : <FaBars />}
           </button>
         </div>
         <div
@@ -68,11 +68,6 @@ const Navbar = () => {
           >
             Products
           </Link>
-          <div className="md:hidden mt-2">
-            <button onClick={toggleMenu} className="text-white">
-              <FaTimes />
-            </button>
-          </div>
         </div>
       </div>
     </nav>
